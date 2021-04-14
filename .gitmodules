@@ -1,6 +1,8 @@
 [submodule "pulp-sdk"]
 	path = pulp-sdk
 	url = https://github.com/pulp-platform/pulp-sdk.git
+	ignore = dirty
 [submodule "pulp-riscv-gnu-toolchain"]
 	path = pulp-riscv-gnu-toolchain
 	url = https://github.com/pulp-platform/pulp-riscv-gnu-toolchain.git
+	ignore = dirty

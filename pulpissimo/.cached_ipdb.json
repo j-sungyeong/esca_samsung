@@ -1,0 +1,468 @@
+{
+    "vsim_dir": "sim",
+    "rtl_dir": "rtl",
+    "fpgasim_dir": "./fpga/sim",
+    "ips_dir": "ips",
+    "ip_list": [
+        {
+            "server": null,
+            "path": "common_verification",
+            "alternatives": null,
+            "name": "common_verification",
+            "domain": null,
+            "commit": "v0.1.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "common_cells",
+            "alternatives": null,
+            "name": "common_cells",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.20.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "L2_tcdm_hybrid_interco",
+            "alternatives": null,
+            "name": "L2_tcdm_hybrid_interco",
+            "domain": [
+                "soc"
+            ],
+            "commit": "pulpissimo-v1.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "cluster_interconnect",
+            "alternatives": null,
+            "name": "cluster_interconnect",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.1.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "adv_dbg_if",
+            "alternatives": null,
+            "name": "adv_dbg_if",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v0.0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb/apb2per",
+            "alternatives": null,
+            "name": "apb2per",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb/apb_adv_timer",
+            "alternatives": null,
+            "name": "apb_adv_timer",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.2",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb/apb_fll_if",
+            "alternatives": null,
+            "name": "apb_fll_if",
+            "domain": [
+                "soc"
+            ],
+            "commit": "pulpissimo-v1.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb/apb_gpio",
+            "alternatives": null,
+            "name": "apb_gpio",
+            "domain": [
+                "soc"
+            ],
+            "commit": "0e9f142f2f11278445c953ad011fce1c7ed85b66",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb/apb_node",
+            "alternatives": null,
+            "name": "apb_node",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.1.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "apb_interrupt_cntrl",
+            "alternatives": null,
+            "name": "apb_interrupt_cntrl",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "axi/axi",
+            "alternatives": null,
+            "name": "axi",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v0.24.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "axi/axi_slice",
+            "alternatives": null,
+            "name": "axi_slice",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.1.4",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "axi/axi_slice_dc",
+            "alternatives": null,
+            "name": "axi_slice_dc",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.1.3",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "timer_unit",
+            "alternatives": null,
+            "name": "timer_unit",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.0.2",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "fpu_div_sqrt_mvp",
+            "alternatives": null,
+            "name": "fpu_div_sqrt_mvp",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.0.4",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "fpnew",
+            "alternatives": null,
+            "name": "fpnew",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v0.6.5",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "jtag_pulp",
+            "alternatives": null,
+            "name": "jtag_pulp",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "riscv",
+            "alternatives": null,
+            "name": "riscv",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "pulpissimo-v3.4.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "ibex",
+            "alternatives": null,
+            "name": "ibex",
+            "domain": [
+                "soc"
+            ],
+            "commit": "e65a27e14dda7bb3b09cadc4e9232305fd451cec",
+            "group": "lowRISC"
+        },
+        {
+            "server": null,
+            "path": "scm",
+            "alternatives": null,
+            "name": "scm",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "generic_FLL",
+            "alternatives": null,
+            "name": "generic_FLL",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.1",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "tech_cells_generic",
+            "alternatives": null,
+            "name": "tech_cells_generic",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v0.1.6",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_core",
+            "alternatives": null,
+            "name": "udma_core",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_uart",
+            "alternatives": null,
+            "name": "udma_uart",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_i2c",
+            "alternatives": null,
+            "name": "udma_i2c",
+            "domain": [
+                "soc"
+            ],
+            "commit": "vega_v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_i2s",
+            "alternatives": null,
+            "name": "udma_i2s",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.1.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_qspi",
+            "alternatives": null,
+            "name": "udma_qspi",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_sdio",
+            "alternatives": null,
+            "name": "udma_sdio",
+            "domain": [
+                "soc"
+            ],
+            "commit": "vega_v1.0.5",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_camera",
+            "alternatives": null,
+            "name": "udma_camera",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_filter",
+            "alternatives": null,
+            "name": "udma_filter",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "udma/udma_external_per",
+            "alternatives": null,
+            "name": "udma_external_per",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v1.0.0",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "hwpe-ctrl",
+            "alternatives": null,
+            "name": "hwpe-ctrl",
+            "domain": null,
+            "commit": "ec068eb",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "hwpe-stream",
+            "alternatives": null,
+            "name": "hwpe-stream",
+            "domain": null,
+            "commit": "1a9b04f",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "hwpe-mac-engine",
+            "alternatives": null,
+            "name": "hwpe-mac-engine",
+            "domain": [
+                "cluster",
+                "soc"
+            ],
+            "commit": "v1.2",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "riscv-dbg",
+            "alternatives": null,
+            "name": "riscv-dbg",
+            "domain": [
+                "soc"
+            ],
+            "commit": "v0.2",
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "register_interface",
+            "alternatives": null,
+            "name": "register_interface",
+            "domain": [
+                "soc"
+            ],
+            "commit": "b1bc9c22e0c2a5801107070c022904498dbae34b",
+            "group": null
+        },
+        {
+            "server": "https://github.com",
+            "path": "pulp_soc",
+            "alternatives": null,
+            "name": "pulp_soc",
+            "domain": null,
+            "commit": "v2.0.1",
+            "group": "pulp-platform"
+        },
+        {
+            "server": "https://github.com",
+            "path": "tbtools",
+            "alternatives": null,
+            "name": "tbtools",
+            "domain": null,
+            "commit": "v0.1",
+            "group": "pulp-platform"
+        }
+    ],
+    "rtl_list": [
+        {
+            "server": null,
+            "path": "tb",
+            "alternatives": null,
+            "name": "tb",
+            "domain": null,
+            "commit": null,
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "vip",
+            "alternatives": null,
+            "name": "vip",
+            "domain": null,
+            "commit": null,
+            "group": null
+        },
+        {
+            "server": null,
+            "path": "pulpissimo",
+            "alternatives": null,
+            "name": "pulpissimo",
+            "domain": null,
+            "commit": null,
+            "group": null
+        }
+    ]
+}
