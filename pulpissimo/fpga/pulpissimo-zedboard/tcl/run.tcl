@@ -52,8 +52,14 @@ add_files -norecurse $FPGA_RTL/xilinx_pulpissimo.v
 # Add Xilinx IPs
 read_ip $FPGA_IPS/xilinx_clk_mngr/ip/xilinx_clk_mngr.xci
 read_ip $FPGA_IPS/xilinx_slow_clk_mngr/ip/xilinx_slow_clk_mngr.xci
-read_ip $FPGA_IPS/xilinx_interleaved_ram/ip/xilinx_interleaved_ram.xci
-read_ip $FPGA_IPS/xilinx_private_ram/ip/xilinx_private_ram.xci
+
+read_ip $FPGA_IPS/xilinx_interleaved_ram0/xilinx_interleaved_ram0.srcs/sources_1/ip/xilinx_interleaved_ram0/xilinx_interleaved_ram0.xci
+read_ip $FPGA_IPS/xilinx_interleaved_ram1/xilinx_interleaved_ram1.srcs/sources_1/ip/xilinx_interleaved_ram1/xilinx_interleaved_ram1.xci
+read_ip $FPGA_IPS/xilinx_interleaved_ram2/xilinx_interleaved_ram2.srcs/sources_1/ip/xilinx_interleaved_ram2/xilinx_interleaved_ram2.xci
+read_ip $FPGA_IPS/xilinx_interleaved_ram3/xilinx_interleaved_ram3.srcs/sources_1/ip/xilinx_interleaved_ram3/xilinx_interleaved_ram3.xci
+ 
+read_ip $FPGA_IPS/xilinx_private_ram0/xilinx_private_ram0.srcs/sources_1/ip/xilinx_private_ram0/xilinx_private_ram0.xci
+read_ip $FPGA_IPS/xilinx_private_ram1/xilinx_private_ram1.srcs/sources_1/ip/xilinx_private_ram1/xilinx_private_ram1.xci
 
 # Add wrappers and xilinx specific techcells
 add_files -norecurse $FPGA_RTL/fpga_clk_gen.sv

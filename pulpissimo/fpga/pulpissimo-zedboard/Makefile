@@ -26,18 +26,29 @@ clean-clk: ## Removes all Clocking Wizard IP outputs
 	$(MAKE) -C ips/xilinx_slow_clk_mngr clean
 
 ram: ## Synthesizes the Xilinx Block Memory Generator IPs for PULPissimo's L2 Ram
-	$(MAKE) -C ips/xilinx_interleaved_ram all
-	$(MAKE) -C ips/xilinx_private_ram all
+	$(MAKE) -C coe all
+	$(MAKE) -C ips/xilinx_private_ram0 all
+	$(MAKE) -C ips/xilinx_private_ram1 all
+	$(MAKE) -C ips/xilinx_interleaved_ram0 all
+	$(MAKE) -C ips/xilinx_interleaved_ram1 all
+	$(MAKE) -C ips/xilinx_interleaved_ram2 all
+	$(MAKE) -C ips/xilinx_interleaved_ram3 all
 
 clean-ram: ## Removes all Block Ram IP outputs related to l2 ram
-	$(MAKE) -C ips/xilinx_interleaved_ram clean
-	$(MAKE) -C ips/xilinx_private_ram clean
+	$(MAKE) -C coe clean
+	$(MAKE) -C ips/xilinx_private_ram0 clean
+	$(MAKE) -C ips/xilinx_private_ram1 clean
+	$(MAKE) -C ips/xilinx_interleaved_ram0 clean
+	$(MAKE) -C ips/xilinx_interleaved_ram1 clean
+	$(MAKE) -C ips/xilinx_interleaved_ram2 clean
+	$(MAKE) -C ips/xilinx_interleaved_ram3 clean
 
-clean: ## Removes all bitstreams, *.log files and vivado related files (rm -rf vivado*)
+clean: clean-ips ## Removes all bitstreams, *.log files and vivado related files (rm -rf vivado*)
 	rm -rf ${PROJECT}.*[^'bit']
 	rm -rf ${PROJECT}.*[^'bin']
 	rm -rf *.log
 	rm -rf vivado*
+	rm -rf *.mif
 
 download: ## Download the bitstream into the FPGA
 	$(VIVADO) -mode batch -source tcl/download_bitstream.tcl -tclargs $(PROJECT).runs/impl_1/xilinx_pulpissimo.bit pulpissimo_$(BOARD).bit

@@ -11,7 +11,7 @@
 *.xpr
 *.jou
 *.log
-
+*.str
 .cxl.*
 
 *_stub.v

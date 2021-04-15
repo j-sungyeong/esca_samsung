@@ -32,5 +32,25 @@ module fpga_bootrom
    input logic [ADDR_WIDTH-1:0]  A,
    output logic [DATA_WIDTH-1:0] Q
    );
-  assign Q = 32'h0000006f; //jal x0,0
+   localparam NUM_WORDS = 2**ADDR_WIDTH;
+   
+   logic [DATA_WIDTH-1:0] MEM [NUM_WORDS-1:0];
+   logic [ADDR_WIDTH-1:0] A_Q;
+   
+   //jump to 0x1c008080
+   initial
+   begin
+        MEM[0] = 32'h1C008537;
+        MEM[1] = 32'h08050513;
+        MEM[2] = 32'h00050067;
+   end
+  
+  always_ff @(posedge CLK)
+  begin
+    if(CEN==1'b0)
+        A_Q <=A;
+    end
+    
+    assign Q = MEM[A_Q];
+
 endmodule : fpga_bootrom

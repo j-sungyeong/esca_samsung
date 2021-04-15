@@ -10,3 +10,4 @@ export INTERLEAVED_BANK_SIZE=28672
 export PRIVATE_BANK_SIZE=8192
 $(info Setting environment variables for $(BOARD) board)
 
+export COE_PATH=${PWD}/coe

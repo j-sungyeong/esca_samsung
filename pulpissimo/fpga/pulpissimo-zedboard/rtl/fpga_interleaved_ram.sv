@@ -22,7 +22,8 @@
 
 module fpga_interleaved_ram
   #(
-    parameter ADDR_WIDTH=12
+    parameter ADDR_WIDTH=12,
+    parameter BANK_SELECT=0
     ) (
        input logic                  clk_i,
        input logic                  rst_ni,
@@ -44,7 +45,9 @@ module fpga_interleaved_ram
     end
   end
 
-  xilinx_interleaved_ram i_xilinx_interleaved_ram
+  generate
+    if(BANK_SELECT==0) begin:INTER_RAM0
+  xilinx_interleaved_ram0 i_xilinx_interleaved_ram0
     (
      .clka(clk_i),
      .ena(~csn_i),
@@ -53,5 +56,37 @@ module fpga_interleaved_ram
      .dina(wdata_i),
      .douta(rdata_o)
      );
+    end else if(BANK_SELECT==1) begin:INTER_RAM1
+    xilinx_interleaved_ram1 i_xilinx_interleaved_ram1
+    (
+     .clka(clk_i),
+     .ena(~csn_i),
+     .wea(wea),
+     .addra(addr_i),
+     .dina(wdata_i),
+     .douta(rdata_o)
+     );
+    end else if(BANK_SELECT==2) begin:INTER_RAM2
+    xilinx_interleaved_ram2 i_xilinx_interleaved_ram2
+    (
+     .clka(clk_i),
+     .ena(~csn_i),
+     .wea(wea),
+     .addra(addr_i),
+     .dina(wdata_i),
+     .douta(rdata_o)
+     );
+    end else begin:INTER_RAM3
+    xilinx_interleaved_ram3 i_xilinx_interleaved_ram3
+    (
+     .clka(clk_i),
+     .ena(~csn_i),
+     .wea(wea),
+     .addra(addr_i),
+     .dina(wdata_i),
+     .douta(rdata_o)
+     );
+    end
+    endgenerate
 
 endmodule : fpga_interleaved_ram
