@@ -11,6 +11,8 @@
 *.xpr
 *.jou
 *.log
+*.str
+*.mif
 
 .cxl.*
 

@@ -13,6 +13,7 @@
 *.log
 *.str
 .cxl.*
+*.mif
 
 *_stub.v
 gmon.out
