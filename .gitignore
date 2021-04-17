@@ -1,3 +1,5 @@
 pulp-riscv-gnu-toolchain/
 pulp-sdk/
 pulp-compiler/
+riscv-gnu-toolchain/
+riscv-compiler/

@@ -108,10 +108,9 @@ If you meet something related to 'CMake version' error after sourcing vivado, pl
 
 ## 3. Porting PULPissimo to FPGA(Xilinx ZCU102)
 For more information, please visit here(https://github.com/pulp-platform/pulpissimo). [Vivado 2018.3](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html) should be installed first. Vivado Design Suite license is required for synthesis.   
-If you cloned this repository, not the official one, you can skip ```./update-ips``` and ```./generate-scripts```.
+If you cloned this repository, do ```./generate-scripts```.
 ```
 //move to pulpissimo directory
-$ ./update-ips
 $ ./generate-scripts
 
 $ source [Vivado install path]/Vivado/2018.3/settings64.sh
