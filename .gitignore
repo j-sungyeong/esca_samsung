@@ -3,3 +3,4 @@ pulp-sdk/
 pulp-compiler/
 riscv-gnu-toolchain/
 riscv-compiler/
+escaplp/

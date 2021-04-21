@@ -73,7 +73,7 @@ module xilinx_pulpissimo
  );
 
   localparam CORE_TYPE = 0; // 0 for RISCY, 1 for ZERORISCY, 2 for MICRORISCY
-  localparam USE_FPU   = 1;
+  localparam USE_FPU   = 0;
   localparam USE_HWPE = 0;
 
   wire        ref_clk;
