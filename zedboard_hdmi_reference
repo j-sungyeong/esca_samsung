@@ -1,0 +1,67 @@
+environment
+	ubuntu20.04
+	zedboard
+		connected with monitor by hdmi
+		connected with linux pc with jtag (micro 5-pin / USB2.0)
+		connected with window pc with uart (micro 5-pin / USB2.0)(tera-term, baud-rate : 115200) # you can use other application if you want
+
+0. prerequisite
+	vivado 2019.1		- can install from Xilinx homepage / make sure to install SDK too
+	export PATH=<path_to_xilinx>/Vivado/bin:<path_to_xilinx>/SDK/bin:$PATH
+	git 				- can install with sudo apt-get install git
+	wine				- can install with sudo apt-get install wine
+
+0-1	gcc-arm-none-eabi(arm-none-eabi-gcc)-5_3-2016q1 version
+	# you can't download this with apt
+	sudo apt autoremove gcc-arm-none-eabi
+	# you should download this from https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/gccarmnoneeabi532016q120160330linuxtar.bz2 
+	# In preparation of the link is missed, I will upload the file need for installation
+	# extract the file
+	export PATH=<extracted_path>/gcc-arm-none-eabi-5_3-2016q1/bin:$PATH
+
+1. make hardware design
+	# go to the your base workspace directory
+	git clone https://github.com/analogdevicesinc/hdl.git
+	cd hdl
+	git status
+	git checkout hdl_2019_r2 
+	# if you don't use vivado 2019.1, you can find proper version with https://github.com/analogdevicesinc/hdl/blob/master/projects/scripts/adi_project_xilinx.tcl
+	git fetch
+	git rebase origin/hdl_2019_r2
+	cd project/adv7511/zed
+	make
+# this will take minutes...
+# after this, you can find system_top.hdf file or system_top.xsa file in hdl/project/adv7511/zed/adv7511_zed.sdk/
+# In preparation of some errors with hardware design, I will upload the hardware design file here
+2. install adv7511 hdmi transmitter library
+	#go to the link https://www.analog.com/media/en/dsp-hardware-software/software-modules/ADV7511_API_Library.exe
+	cd ~/Download
+	wine ADV7511_API_Library.exe
+	#default directory is ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/
+	#install the adv7511_api_library
+
+3. run
+	# turn on the zedboard
+	# make sure the setting is jtag connection
+	# make sure jtag connection with linux pc is well done
+	# make sure uart connection with pc is well done
+	# make sure hdmi connection with monitor is well done and monitor is powered on
+	# go to the your base workspace directory
+	git clone --recursive https://github.com/analogdevicesinc/no-OS.git
+	cd no-OS/project/adv7511/
+	source <path_to_xilinx>/SDK/2019.1/settings64.sh
+	gedit src/app_config.h
+	#erase "//" before the #define PLATFORM_ZED
+	cp --recursive ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/Src/TX .
+	# if you install adv7511 hdmi transmitter library somewhere else, you can do
+	# cp --recursive /<path_to_adv7511_hdmi_transmitter_library>/Src/TX .
+	cp /path_to_hdl/hdl/project/adv7511/zed/adv7511_zed.sdk/system_top* .
+	make run
+
+	# after this you can see the uart text
+	# press the number key will change the resolution
+
+P.S. reference
+	https://wiki.analog.com/resources/fpga/xilinx/kc705/adv7511
+	https://wiki.analog.com/resources/fpga/docs/build
+	https://github.com/analogdevicesinc/no-OS/wiki
