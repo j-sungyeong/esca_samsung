@@ -26,9 +26,9 @@ $ sudo apt-get install autoconf automake autotools-dev curl libmpc-dev libmpfr-d
 ```
 
 ### Installation
-[TOOLCHAIN_PATH] is where you want to install the compiler. Following command builds 32-bit RISC-V cross-compiler(RV32IMC).
+[TOOLCHAIN_PATH] is where you want to install the compiler. Following command builds 32-bit RISC-V cross-compiler(RV32I). If you need M and C extensions, use ```--with-arch=rv32imc``` instead.
 ```
-$ ./configure --prefix=[TOOLCHAIN_PATH] --with-arch=rv32imc --enable-multilib
+$ ./configure --prefix=[TOOLCHAIN_PATH] --with-arch=rv32i --enable-multilib
 $ make
 ```
 After build finishes, set ```PULP_RISCV_GCC_TOOLCHAIN``` environment variable.
