@@ -134,7 +134,7 @@ make run
 After this, you can see the manual is coming out on uart. You can follow that manual to controll the hdmi interface.
 For example, if you type in 6, monitor resolution is changed to 1920x1080 and you can see default picture appears on monitor.
 
-## 4. Reference
+## 4. References
 If you have any problems above, please visit the reference sites below.
 
 - [ADV7511 Xilinx Evaluation Boards Reference Design](https://wiki.analog.com/resources/fpga/xilinx/kc705/adv7511)
