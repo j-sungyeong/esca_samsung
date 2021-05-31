@@ -87,13 +87,13 @@ After this, you can find system_top.hdf or system_top.xsa file in hdl/project/ad
 
 ## 3. Build the software
 Before build the software, make sure that
-		- Zedboard is turned on
-		- Zedboard booting setting is JTAG
-		- Zedboard and Linux PC are connected with JTAG
-		- Zedboard and PC are connected with UART
-		- Baud rate of UART is 115200
-		- Zedboard and monitor are connected with HDMI
-		- Monitor is powered on
+- Zedboard is turned on
+- Zedboard booting setting is JTAG
+- Zedboard and Linux PC are connected with JTAG
+- Zedboard and PC are connected with UART
+- Baud rate of UART is 115200
+- Zedboard and monitor are connected with HDMI
+- Monitor is powered on
 
 ### 3-1. Clone the building repository
 Now, go to your base workspace directory and clone the building repository. After that, go into the project/adv7511 folder
@@ -136,6 +136,7 @@ For example, if you type in 6, monitor resolution is changed to 1920x1080 and yo
 
 ## 4. Reference
 If you have any problems above, please visit the reference sites below.
-	[ADV7511 Xilinx Evaluation Boards Reference Design](https://wiki.analog.com/resources/fpga/xilinx/kc705/adv7511)
-	[Building HDL wiki](https://wiki.analog.com/resources/fpga/docs/build)
-	[No-OS github wiki](https://github.com/analogdevicesinc/no-OS/wiki)
+
+- [ADV7511 Xilinx Evaluation Boards Reference Design](https://wiki.analog.com/resources/fpga/xilinx/kc705/adv7511)
+- [Building HDL wiki](https://wiki.analog.com/resources/fpga/docs/build)
+- [No-OS github wiki](https://github.com/analogdevicesinc/no-OS/wiki)
