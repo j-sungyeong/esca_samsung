@@ -134,7 +134,9 @@ After this, you can see the manual is coming out on uart. You can follow that ma
 
 ![Alt text](zedboard_hdmi_uart_image.PNG "Uart output")
 
-For example, if you type in 6, monitor resolution is changed to 1920x1080 and you can see default picture appears on monitor.
+For example, if you type in 6, monitor resolution is changed to 1920 x 1080 and you can see default picture appears on monitor. After that, you can see example picture is on your monitor. The example picture is with monitor resolution 1920 x 1080
+
+![Alt text](zedboard_hdmi_output.jpg "Monitor example")
 
 ## 4. References
 If you have any problems above, please visit the reference sites below.
