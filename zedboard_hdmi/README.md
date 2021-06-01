@@ -1,4 +1,4 @@
-# ADV7511 Zedboard Boards Reference Design
+# ADV7511 Zedboard Boards Reference Design Tutorial
 
 ## Getting started
 This document is based on the requirements below.
@@ -22,7 +22,7 @@ sudo apt-get install wine
 ```
 
 ### 0-3. gcc-arm-none-eabi v5.3
-The latest version of gcc-arm-none-eabi has problem with 'Build the HDL Project'. You should remove it with
+The latest version of gcc-arm-none-eabi has some problems with 'Build the HDL Project'. You should remove it with
 ```bash
 sudo apt autoremove gcc-arm-none-eabi
 ```
