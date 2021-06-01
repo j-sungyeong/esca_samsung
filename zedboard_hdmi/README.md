@@ -131,6 +131,9 @@ cp --recursive ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/Src/TX .
 make run
 ```
 After this, you can see the manual is coming out on uart. You can follow that manual to controll the hdmi interface.
+
+![Alt text](zedboard_hdmi_uart_image.PNG "Uart output")
+
 For example, if you type in 6, monitor resolution is changed to 1920x1080 and you can see default picture appears on monitor.
 
 ## 4. References
