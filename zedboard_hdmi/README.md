@@ -30,7 +30,6 @@ You should download compressed file from [here](https://armkeil.blob.core.window
 ```bash
 export PATH=<path_to_extracted_file>/gcc-arm-none-eabi-5_3-2016q1/bin:$PATH
 ```
-In preparation of the case that link is missed, I upload the compressed file. Its name is gcc-arm-old.
 
 ### 0-4 setting PATH
 You must add Vivado and SDK to the path. Also, you must source the SDK setting.
