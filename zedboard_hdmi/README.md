@@ -115,13 +115,13 @@ You can see the c code. Erase the remark icon before the PLATFORM_ZED.
 #define PLATFORM_ZED
 ```
 ### 3-3 Copy the former files
-Copy the hardware design from HDL directory and hdmi transmitter from ADV7511 API library. If you install ADV7511_API_Library without changing installation directory, you can use
+Copy the hardware design from HDL directory and hdmi transmitter from ADV7511 API library. If you install adv7511 hdmi transmitter library somewhere else, you can use
 ```bash
 cp <path_to_hdl>/hdl/project/adv7511/zed/adv7511_zed.sdk/system_top* .
 cp --recursive /<path_to_adv7511_hdmi_transmitter_library>/Src/TX .
 ```
 
-if you install adv7511 hdmi transmitter library somewhere else, you can use
+If you install ADV7511_API_Library without changing installation directory, you can use
 ```bash
 cp --recursive ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/Src/TX .
 ```
