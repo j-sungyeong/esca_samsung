@@ -121,7 +121,7 @@ cp <path_to_hdl>/hdl/project/adv7511/zed/adv7511_zed.sdk/system_top* .
 cp --recursive /<path_to_adv7511_hdmi_transmitter_library>/Src/TX .
 ```
 
-If you install ADV7511_API_Library without changing installation directory, you can use
+If you install ADV7511_API_Library without changing installation directory, you can use below code alternatively.
 ```bash
 cp --recursive ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/Src/TX .
 ```
