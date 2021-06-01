@@ -290,7 +290,6 @@ cp --recursive ~/.wine/drive_c/Analog\ Devices/ADV7511_API_Library*/Src/TX .
 make run
 ```
 위의 코드를 실행하면, UART 화면에 설명이 나타나는 것을 볼 수 있을 것입니다. 설명을 따라 HDMI 설정을 변경해주세요.
-After this, you can see the manual is coming out on uart. You can follow that manual to controll the hdmi interface.
 
 ![Alt text](zedboard_hdmi_uart_image.PNG "UART 출력")
 
