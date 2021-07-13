@@ -6,6 +6,3 @@
 	path = pulp-riscv-gnu-toolchain
 	url = https://github.com/pulp-platform/pulp-riscv-gnu-toolchain.git
 	ignore = dirty
-[submodule "zedboard_hdmi"]
-	path = zedboard_hdmi
-	url = https://github.com/Peanut-JR/zedboard_hdmi.git
