@@ -10,3 +10,6 @@
 	path = ov7670_with_cnn_open
 	url = https://github.com/Peanut-JR/ov7670_with_cnn_open.git
 	ignore = dirty
+[submodule "zedboard_hdmi"]
+	path = zedboard_hdmi
+	url = https://github.com/Peanut-JR/zedboard_hdmi.git
