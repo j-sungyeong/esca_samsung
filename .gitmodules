@@ -6,3 +6,7 @@
 	path = pulp-riscv-gnu-toolchain
 	url = https://github.com/pulp-platform/pulp-riscv-gnu-toolchain.git
 	ignore = dirty
+[submodule "ov7670_with_cnn_open"]
+	path = ov7670_with_cnn_open
+	url = https://github.com/Peanut-JR/ov7670_with_cnn_open.git
+	ignore = dirty
